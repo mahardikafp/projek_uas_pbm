@@ -1,0 +1,264 @@
+{
+    "msg": "Surat Data",
+    "data": [
+        {
+            "id": 78,
+            "surat_name": "An-Naba'",
+            "surat_text": " \u0627\u0644\u0646\u0628\u0623",
+            "surat_terjemahan": "Berita Besar",
+            "count_ayat": 40
+        },
+        {
+            "id": 79,
+            "surat_name": "An-Nazi'at",
+            "surat_text": " \u0627\u0644\u0646\u0651\u0670\u0632\u0639\u0670\u062a",
+            "surat_terjemahan": "Malaikat Yang Mencabut",
+            "count_ayat": 46
+        },
+        {
+            "id": 80,
+            "surat_name": "'Abasa",
+            "surat_text": " \u0639\u0628\u0633",
+            "surat_terjemahan": "Bermuka Masam",
+            "count_ayat": 42
+        },
+        {
+            "id": 81,
+            "surat_name": "At-Takwir",
+            "surat_text": " \u0627\u0644\u062a\u0643\u0648\u064a\u0631",
+            "surat_terjemahan": "Penggulungan",
+            "count_ayat": 29
+        },
+        {
+            "id": 82,
+            "surat_name": "Al-Infitar",
+            "surat_text": " \u0627\u0644\u0627\u0646\u0641\u0637\u0627\u0631",
+            "surat_terjemahan": "Terbelah",
+            "count_ayat": 19
+        },
+        {
+            "id": 83,
+            "surat_name": "Al-Mutaffifin",
+            "surat_text": " \u0627\u0644\u0645\u0637\u0641\u0651\u0641\u064a\u0646",
+            "surat_terjemahan": "Orang-Orang Curang",
+            "count_ayat": 36
+        },
+        {
+            "id": 84,
+            "surat_name": "Al-Insyiqaq",
+            "surat_text": " \u0627\u0644\u0627\u0646\u0634\u0642\u0627\u0642",
+            "surat_terjemahan": "Terbelah",
+            "count_ayat": 25
+        },
+        {
+            "id": 85,
+            "surat_name": "Al-Buruj",
+            "surat_text": " \u0627\u0644\u0628\u0631\u0648\u062c",
+            "surat_terjemahan": "Gugusan Bintang",
+            "count_ayat": 22
+        },
+        {
+            "id": 86,
+            "surat_name": "At-Tariq",
+            "surat_text": " \u0627\u0644\u0637\u0627\u0631\u0642",
+            "surat_terjemahan": "Yang Datang Di Malam Hari",
+            "count_ayat": 17
+        },
+        {
+            "id": 87,
+            "surat_name": "Al-A'la",
+            "surat_text": " \u0627\u0644\u0627\u0639\u0644\u0649",
+            "surat_terjemahan": "Maha Tinggi",
+            "count_ayat": 19
+        },
+        {
+            "id": 88,
+            "surat_name": "Al-Gasyiyah",
+            "surat_text": " \u0627\u0644\u063a\u0627\u0634\u064a\u0629",
+            "surat_terjemahan": "Hari Kiamat",
+            "count_ayat": 26
+        },
+        {
+            "id": 89,
+            "surat_name": "Al-Fajr",
+            "surat_text": " \u0627\u0644\u0641\u062c\u0631",
+            "surat_terjemahan": "Fajar",
+            "count_ayat": 30
+        },
+        {
+            "id": 90,
+            "surat_name": "Al-Balad",
+            "surat_text": " \u0627\u0644\u0628\u0644\u062f",
+            "surat_terjemahan": "Negeri",
+            "count_ayat": 20
+        },
+        {
+            "id": 91,
+            "surat_name": "Asy-Syams",
+            "surat_text": " \u0627\u0644\u0634\u0645\u0633",
+            "surat_terjemahan": "Matahari",
+            "count_ayat": 15
+        },
+        {
+            "id": 92,
+            "surat_name": "Al-Lail",
+            "surat_text": " \u0627\u0644\u0651\u064a\u0644",
+            "surat_terjemahan": "Malam",
+            "count_ayat": 21
+        },
+        {
+            "id": 93,
+            "surat_name": "Ad-Duha",
+            "surat_text": " \u0627\u0644\u0636\u062d\u0649",
+            "surat_terjemahan": "Duha",
+            "count_ayat": 11
+        },
+        {
+            "id": 94,
+            "surat_name": "Asy-Syarh",
+            "surat_text": " \u0627\u0644\u0634\u0631\u062d",
+            "surat_terjemahan": "Lapang",
+            "count_ayat": 8
+        },
+        {
+            "id": 95,
+            "surat_name": "At-Tin",
+            "surat_text": " \u0627\u0644\u062a\u064a\u0646",
+            "surat_terjemahan": "Buah Tin",
+            "count_ayat": 8
+        },
+        {
+            "id": 96,
+            "surat_name": "Al-'Alaq",
+            "surat_text": " \u0627\u0644\u0639\u0644\u0642",
+            "surat_terjemahan": "Segumpal Darah",
+            "count_ayat": 19
+        },
+        {
+            "id": 97,
+            "surat_name": "Al-Qadr",
+            "surat_text": " \u0627\u0644\u0642\u062f\u0631",
+            "surat_terjemahan": "Kemuliaan",
+            "count_ayat": 5
+        },
+        {
+            "id": 98,
+            "surat_name": "Al-Bayyinah",
+            "surat_text": " \u0627\u0644\u0628\u064a\u0651\u0646\u0629",
+            "surat_terjemahan": "Bukti Nyata",
+            "count_ayat": 8
+        },
+        {
+            "id": 99,
+            "surat_name": "Az-Zalzalah",
+            "surat_text": " \u0627\u0644\u0632\u0644\u0632\u0644\u0629",
+            "surat_terjemahan": "Guncangan",
+            "count_ayat": 8
+        },
+        {
+            "id": 100,
+            "surat_name": "Al-'Adiyat",
+            "surat_text": " \u0627\u0644\u0639\u0670\u062f\u064a\u0670\u062a",
+            "surat_terjemahan": "Kuda Yang Berlari Kencang",
+            "count_ayat": 11
+        },
+        {
+            "id": 101,
+            "surat_name": "Al-Qari'ah",
+            "surat_text": " \u0627\u0644\u0642\u0627\u0631\u0639\u0629",
+            "surat_terjemahan": "Hari Kiamat",
+            "count_ayat": 11
+        },
+        {
+            "id": 102,
+            "surat_name": "At-Takasur",
+            "surat_text": " \u0627\u0644\u062a\u0643\u0627\u062b\u0631",
+            "surat_terjemahan": "Bermegah-Megahan",
+            "count_ayat": 8
+        },
+        {
+            "id": 103,
+            "surat_name": "Al-'Asr",
+            "surat_text": " \u0627\u0644\u0639\u0635\u0631",
+            "surat_terjemahan": "Asar",
+            "count_ayat": 3
+        },
+        {
+            "id": 104,
+            "surat_name": "Al-Humazah",
+            "surat_text": " \u0627\u0644\u0647\u0645\u0632\u0629",
+            "surat_terjemahan": "Pengumpat",
+            "count_ayat": 9
+        },
+        {
+            "id": 105,
+            "surat_name": "Al-Fil",
+            "surat_text": " \u0627\u0644\u0641\u064a\u0644",
+            "surat_terjemahan": "Gajah",
+            "count_ayat": 5
+        },
+        {
+            "id": 106,
+            "surat_name": "Quraisy",
+            "surat_text": " \u0642\u0631\u064a\u0634",
+            "surat_terjemahan": "Quraisy",
+            "count_ayat": 4
+        },
+        {
+            "id": 107,
+            "surat_name": "Al-Ma'un",
+            "surat_text": " \u0627\u0644\u0645\u0627\u0639\u0648\u0646",
+            "surat_terjemahan": "Barang Yang Berguna",
+            "count_ayat": 7
+        },
+        {
+            "id": 108,
+            "surat_name": "Al-Kausar",
+            "surat_text": " \u0627\u0644\u0643\u0648\u062b\u0631",
+            "surat_terjemahan": "Pemberian Yang Banyak",
+            "count_ayat": 3
+        },
+        {
+            "id": 109,
+            "surat_name": "Al-Kafirun",
+            "surat_text": " \u0627\u0644\u0643\u0670\u0641\u0631\u0648\u0646",
+            "surat_terjemahan": "Orang-Orang kafir",
+            "count_ayat": 6
+        },
+        {
+            "id": 110,
+            "surat_name": "An-Nasr",
+            "surat_text": " \u0627\u0644\u0646\u0635\u0631",
+            "surat_terjemahan": "Pertolongan",
+            "count_ayat": 3
+        },
+        {
+            "id": 111,
+            "surat_name": "Al-Lahab",
+            "surat_text": " \u0627\u0644\u0644\u0647\u0628",
+            "surat_terjemahan": "Api Yang Bergejolak",
+            "count_ayat": 5
+        },
+        {
+            "id": 112,
+            "surat_name": "Al-Ikhlas",
+            "surat_text": " \u0627\u0644\u0627\u062e\u0644\u0627\u0635",
+            "surat_terjemahan": "Ikhlas",
+            "count_ayat": 4
+        },
+        {
+            "id": 113,
+            "surat_name": "Al-Falaq",
+            "surat_text": " \u0627\u0644\u0641\u0644\u0642",
+            "surat_terjemahan": "Subuh",
+            "count_ayat": 5
+        },
+        {
+            "id": 114,
+            "surat_name": "An-Nas",
+            "surat_text": " \u0627\u0644\u0646\u0627\u0633",
+            "surat_terjemahan": "Manusia",
+            "count_ayat": 6
+        }
+    ]
+}
