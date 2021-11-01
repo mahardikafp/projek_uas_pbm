@@ -1,6 +1,9 @@
+import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:projek_uas/main.dart';
 import 'count.dart';
+import 'detail.dart';
 
 int mainCounter = 0;
 
@@ -27,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    getjus30();
     return Scaffold(
       backgroundColor: Colors.purple,
       appBar: AppBar(
@@ -50,28 +54,47 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: ListView(
         children: [
-          Container(
-            child: FutureBuilder(
-              builder: (context, snapshot) {
-                var showData = json.decode(snapshot.data.toString());
-                return ListView.builder(
-                  itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      title: Text(showData[index]['surat_name']),
-                      subtitle: Text(showData[index]['surat_terjemahan']),
-                    );
-                  },
-                  itemCount: showData.length,
-                );
-              },
-              future: DefaultAssetBundle.of(context)
-                  .loadString('assets/juz30.json'),
-            ),
-          ),
           if (_selectedIndex == 1)
             Count()
           else if (_selectedIndex == 0)
-            Container()
+            Column(
+              children: [
+                for (int i = 0; i < jus30.length; i++)
+                  ListTile(
+                    onTap: () {
+                      getSurat(jus30[i]['id']);
+                      // print(isiSurat['data']);
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return DetailSurat();
+                      }));
+                    },
+                    title: Text(
+                      jus30[i]["surat_name"].toString(),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+                    ),
+                    leading: CircleAvatar(
+                      child: Text(jus30[i]["id"].toString()),
+                    ),
+                    subtitle: Text(jus30[i]["surat_text"].toString(),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800, fontSize: 15)),
+                    trailing: CircleAvatar(
+                      radius: 60,
+                      child: Text(jus30[i]["count_ayat"].toString() + ' ayat'),
+                    ),
+                  )
+              ],
+            )
+          //   ),
+          // Container(
+          //   margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+          //   color: Colors.blue,
+          //   width: double.infinity,
+          //   height: 400,
+          //   child: Text(jus30[0]['surat_text'].toString()),
+          // ),
         ],
       ),
       bottomNavigationBar: Container(
