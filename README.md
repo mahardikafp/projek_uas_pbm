@@ -1,4 +1,4 @@
-# projek_uas by:
+# projek_uas PEMRO MOBILE (B) by:
 Deska Dwi Zahratun Nisa (192410102018)
 Mahardika Febri Pratama (192410102048)
 
