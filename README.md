@@ -1,16 +1,9 @@
-# projek_uas
+# projek_uas by:
+Deska Dwi Zahratun Nisa (192410102018)
+Mahardika Febri Pratama (192410102048)
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Aplikasi Sistem Juz Amma
+Adalah sebuah aplikasi yang kami buat pada tugas akhir / projek UAS mata kuliah Pemrograman Berbasis Mobile.
+Aplikasi ini bertujuan untuk mempermudah umat muslim yang ingin membaca atau mengamalkan bacaan pada juz 30 atau yang lebih dikenal dengan juz amma.
+Selain surat-surat pendek, pada aplikasi ini juga terdapat sistem penghitung (couter) untuk melakukan dzikir.
+dan untuk lanjutannya ada menu surat yasin dan beberapa fitur lagi yang masih dalam proses pengerjaan.
