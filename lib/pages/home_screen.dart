@@ -1,7 +1,13 @@
 import 'package:flutter/services.dart';
 import 'dart:convert';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
-import 'package:projek_uas/main.dart';
+import 'package:juz__amma/main.dart';
+import 'package:favorite_button/favorite_button.dart';
+import 'package:juz__amma/pages/favorite.dart';
+import 'package:juz__amma/pages/yasin.dart';
+import 'package:juz__amma/pages/favorite.dart';
 import 'count.dart';
 import 'detail.dart';
 
@@ -19,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final data = await json.decode(response);
     jus30 = data['data'];
   }
-
+  
   void _getjus30(value) {
     print(value);
   }
@@ -39,6 +45,15 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  int _index = 0;
+
+  bool _active = false;
+  void _handleTap() {
+    setState(() {
+      _active = !_active;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -50,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
               title: !isSearching
                   ? Text('Juz Amma')
                   : TextField(
-                      onSubmitted: (value) {
+                      onChanged: (value) {
                         setState(() {
                           searchSeasion = value.toString();
                         });
@@ -107,9 +122,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   Column(
                     children: [
                       for (int i = 0; i < jus30.length; i++)
-                        (jus30[i]['surat_name'].toString())
-                                .contains(searchSeasion)
-                            ? ListTile(
+                        (jus30[i]['surat_name'].toString().toLowerCase())
+                                .contains(searchSeasion.toLowerCase())
+                            ? InkWell(
                                 onTap: () {
                                   Navigator.of(context).push(
                                       MaterialPageRoute(builder: (context) {
@@ -117,64 +132,88 @@ class _HomeScreenState extends State<HomeScreen> {
                                         jus30[i]['id'], jus30[i]['surat_name']);
                                   }));
                                 },
-                                title: Text(
-                                  jus30[i]["surat_name"].toString(),
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 20),
-                                ),
-                                leading: CircleAvatar(
-                                  backgroundColor: Colors.green,
-                                  child: Text(
-                                    jus30[i]["id"].toString(),
-                                    style: TextStyle(color: Colors.white),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 20),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          CircleAvatar(
+                                            backgroundColor: Colors.green,
+                                            child: Text(
+                                              jus30[i]["id"].toString(),
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                          ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                jus30[i]["surat_name"]
+                                                    .toString(),
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontSize: 20),
+                                              ),
+                                              Text(
+                                                  jus30[i]["surat_text"]
+                                                      .toString(),
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 15)),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          FavoriteButton(
+                                            isFavorite: favorite.contains(
+                                                    jus30[i]["id"].toString())
+                                                ? true
+                                                : false,
+                                            valueChanged: (_isFavorite) {
+                                              setData(
+                                                  jus30[i]["id"].toString());
+                                            },
+                                          ),
+                                          CircleAvatar(
+                                            backgroundColor: Colors.lightBlue,
+                                            radius: 24,
+                                            child: Text(
+                                                jus30[i]["count_ayat"]
+                                                        .toString() +
+                                                    ' ayat',
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 13.3)),
+                                          ),
+                                        ],
+                                      )
+                                    ],
                                   ),
                                 ),
-                                subtitle: Text(
-                                    jus30[i]["surat_text"].toString(),
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w800,
-                                        fontSize: 15)),
-                                trailing: CircleAvatar(
-                                  backgroundColor: Colors.lightBlue,
-                                  radius: 24,
-                                  child: Text(
-                                      jus30[i]["count_ayat"].toString() +
-                                          ' ayat',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 13.3)),
-                                ),
                               )
-                            : Container()
-                    ],
-                  )
+                            : Container(),
+       
+
+            bottomNavigationBar: FloatingNavbar(
+              backgroundColor: Colors.green,
+              onTap: _onItemTapped,
+              currentIndex: _selectedIndex,
+              items: [
+                FloatingNavbarItem(icon: Icons.home, title: 'Surah'),
+                FloatingNavbarItem(
+                    icon: Icons.calculate, title: 'Dzikir Counter'),
+                //   currentIndex: _selectedIndex,
+                //   selectedItemColor: Colors.amber[800],
+                //   onTap: _onItemTapped,
+                // ),
               ],
-            ),
-            bottomNavigationBar: ClipRRect(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30),
-                topRight: Radius.circular(30),
-              ),
-              child: BottomNavigationBar(
-                backgroundColor: Colors.green,
-                items: const <BottomNavigationBarItem>[
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.home, size: 20),
-                    label: 'Home',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.other_houses, size: 20),
-                    label: 'Dzikir Counter',
-                  ),
-                  // BottomNavigationBarItem(
-                  //   icon: Icon(Icons.search_rounded, size: 20),
-                  //   label: 'search',
-                  // ),
-                ],
-                currentIndex: _selectedIndex,
-                selectedItemColor: Colors.amber[800],
-                onTap: _onItemTapped,
-              ),
             ),
             drawer: Drawer(
               child: ListView(
@@ -182,7 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   DrawerHeader(
                     decoration: BoxDecoration(
-                        color: Colors.deepOrangeAccent,
+                        color: Colors.yellow,
                         image: DecorationImage(
                             image: AssetImage("images/juzAmma.png"),
                             fit: BoxFit.cover)),
@@ -190,18 +229,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   ListTile(
                     title: Text('Yā Sīn'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    title: Text('Item 3'),
                     onTap: () {
-                      Navigator.pop(context);
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return Yasin();
+                      }));
                     },
                   ),
                   ListTile(
-                    title: Text('Item 4'),
+                    title: Text('Surat Favorite'),
                     onTap: () {
-                      Navigator.pop(context);
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return FavoritePage();
+                      }));
                     },
                   ),
                 ],
