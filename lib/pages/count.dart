@@ -20,7 +20,7 @@ class _CountState extends State<Count> {
         Text(
           "You have dzikir for this many times: ",
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.w800, fontSize: 15),
+              color: Colors.black87, fontWeight: FontWeight.w800, fontSize: 15),
         ),
         Text(
           mainCounter.toString(),
@@ -45,42 +45,3 @@ class _CountState extends State<Count> {
     );
   }
 }
-
-
-
-
-// class _CountState extends State<Count> {
-//   int _counter = 0;
-
-//   void _incrementCounter() {
-//     setState(() {
-//       _counter++;
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Tasbih"),
-//       ),
-//       body: Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: <Widget>[
-//             Text("You have tasbih for this many times: "),
-//             Text(
-//               '$_counter',
-//               style: Theme.of(context).textTheme.display1,
-//             ),
-//           ],
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: _incrementCounter,
-//         tooltip: 'increment',
-//         child: Icon(Icons.add_a_photo_rounded),
-//       ),
-//     );
-//   }
-// }
