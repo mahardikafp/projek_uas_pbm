@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'home_screen.dart';
 
 class Count extends StatefulWidget {
-  // const Count({Key? key}) : super(key: key);
   @override
   _CountState createState() => _CountState();
 }
