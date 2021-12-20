@@ -108,14 +108,6 @@ class _FavoritePageState extends State<FavoritePage> {
                         ),
                       )
                     : Container(),
-              // Center(
-              //   child: Text(
-              //     "index: $_onItemTapped",
-              //     style: TextStyle(
-              //       fontSize: 52,
-              //     ),
-              //   ),
-              // ),
             ],
           )
         ],
