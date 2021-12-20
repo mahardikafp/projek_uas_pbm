@@ -59,16 +59,13 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  // MyApp({Key? key}) : super(key: key);
-
+ 
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
   void initState() {
-    // setData();
-    // setInit();
     getData();
   }
 
@@ -79,7 +76,6 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/home': (BuildContext ctx) => HomeScreen(),
         '/count': (BuildContext ctx) => Count(),
-        // '/detail': (BuildContext ctx) => DetailSurat(),
       },
     );
   }
