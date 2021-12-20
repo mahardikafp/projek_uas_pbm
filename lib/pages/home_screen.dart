@@ -39,7 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
-    // print(index);
     setState(() {
       _selectedIndex = index;
     });
@@ -209,10 +208,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 FloatingNavbarItem(icon: Icons.home, title: 'Surah'),
                 FloatingNavbarItem(
                     icon: Icons.calculate, title: 'Dzikir Counter'),
-                //   currentIndex: _selectedIndex,
-                //   selectedItemColor: Colors.amber[800],
-                //   onTap: _onItemTapped,
-                // ),
               ],
             ),
             drawer: Drawer(
